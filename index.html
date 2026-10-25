@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Инвест-план">
+<meta name="theme-color" content="#0F2647">
+<link rel="icon" href="icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="manifest" href="manifest.json">
+<title>Инвест-план: распределение взносов</title>
+<link rel="stylesheet" href="src/ui/styles.css">
+</head>
+<body>
+
+<div class="topbar">
+  <h1 id="topTitle">Инвест-план</h1>
+  <div class="sub" id="topSub">—</div>
+</div>
+
+<div class="a2hs hidden" id="a2hs">
+  <span class="txt">Установите «Инвест-план» на главный экран, чтобы пользоваться как обычным приложением, даже без интернета.</span>
+  <button id="a2hsInstall">Установить</button>
+  <button class="x" id="a2hsClose" aria-label="Закрыть">✕</button>
+</div>
+
+<main id="main">
+  <noscript><div class="card"><div class="empty">Для работы приложения нужен JavaScript.</div></div></noscript>
+</main>
+
+<div class="toasts" id="toasts" aria-live="polite"></div>
+<input type="file" id="importFile" accept="application/json,.json" style="display:none;">
+
+<nav class="tabbar">
+  <button data-view="accounts" class="active"><span class="ic">💼</span>Счета</button>
+  <button data-view="shares"><span class="ic">🥧</span>Доли</button>
+  <button data-view="purchases"><span class="ic">🛒</span>Покупки</button>
+  <button data-view="more"><span class="ic">☰</span>Ещё</button>
+</nav>
+
+<script type="module" src="src/app.js"></script>
+</body>
+</html>
